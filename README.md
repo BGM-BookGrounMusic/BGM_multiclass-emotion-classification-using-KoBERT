@@ -21,9 +21,12 @@
 
 나는 해당 프로젝트에서 분석의 핵심이 되는 NLP, 즉 KoBERT를 이용한 자연어 처리 파트를 맡아 진행하고 있다. 이를 위해 첫 포스트는 KoBERT를 이용해, 한국어 대화 문장을 7가지의 감정(기쁨, 슬픔, 놀람, 분노, 공포, 혐오, 중립)으로 분류하는 모델을 학습시키려고 한다.
 
+약 8만건의 한국어 말뭉치를 바탕으로 감성분석 모델을 만들었다. 먼저 토큰화, 정수 인코딩, 패딩 등의 과정으로 데이터를 전처리하고, 주어진 텍스트를 문장 단위로 분류하는 코드가 존재한다. KoBert를 이용한 다중감성분류 모델을 이용해 7가지의 세부 감성을 분석할 수 있다.(행복, 중립, 공포, 놀람, 분노, 슬픔, 혐오)
+
+
 이번에 소개할 코드는 SKT Brain에서 제공하는 [KoBERT 깃허브](https://github.com/SKTBrain/KoBERT)에 있는 [naver_review_classifications_pytorch_kobert](https://colab.research.google.com/github/SKTBrain/KoBERT/blob/master/scripts/NSMC/naver_review_classifications_pytorch_kobert.ipynb#scrollTo=yyU73n1og6ed)를 바탕으로 작성했다.
 
-구체적인 코드 설명은 하단의 블로그를 참조해주세요.
+구체적인 코드 설명은 하단의 블로그에 라인별로 있으니 이를 참고하면 된다. 
 
 https://velog.io/@fhflwhwl5/Python-KoBERT-7%EA%B0%80%EC%A7%80-%EA%B0%90%EC%A0%95%EC%9D%98-%EB%8B%A4%EC%A4%91%EA%B0%90%EC%84%B1%EB%B6%84%EB%A5%98%EB%AA%A8%EB%8D%B8-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0
 
